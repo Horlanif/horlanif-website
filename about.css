@@ -13,22 +13,13 @@
 }
 
 
-.sub h1 {
+h1 {
     text-align: center;
     color: orangered;
     padding: 10px;
-    font-size: 80px;
-    grid-area: "overlap";
-    background-color: aqua;
-
-}
-
-.feat h1{
-    background-color: aqua;
-    padding-left: 10px;
-    color: orangered;
-    text-align: center;
     font-size: 100px;
+    grid-area: "overlap";
+
 }
 
 .sub p {
@@ -39,7 +30,7 @@
 
 
 nav {
-    background: none;
+    background-color: blue;
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
@@ -48,7 +39,7 @@ nav {
 }
 
 .header {
-    background-color: transparent;
+    background-color: blue;
 }
 
 nav ul {
@@ -59,7 +50,7 @@ nav ul li {
     display: inline-block;
     padding: 20px;
     text-decoration: none;
-    color: blue;
+    color: white;
     transition: 0.2s ease-in;
     font-size: 20px;
     margin-right: 50px;
@@ -68,7 +59,7 @@ nav ul li {
 
 nav ul li a{
     text-decoration: none;
-    color: blue;
+    color: white;
 }
 
 nav ul li a:hover {
@@ -85,134 +76,130 @@ nav ul li a:hover {
 nav ul li:hover .dropdown ul{
     display: block;
     position: absolute;
-    background-color:white;
-    padding-bottom: 50px;
-   
-    
-    
+    background-color: rgba(79, 11, 236, 0.753);
+    margin-top: 15px;
+    margin-left: 15px;
 }
 
 nav ul li:hover .dropdown ul li{
     display: block;
-    border-bottom: 1px solid orangered;
-    margin-top: 15px;
-    margin-left:20px;
-
+    margin: 10px;
 
 }
 
 
-/* ----------------------slider-------------- */
-.container{
+/*------------------ about-us--------------- */
+.sect {
     width: 100%;
-    background-color: burlywood;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
+    min-height: 100vh;
+    background-color: #ddd;
 }
-.swiper{
+
+.sect .container {
     width: 90%;
-    height:fit-content;
+    height: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 0px;
+    align-content: center;
 }
 
-.swiper-slide img{
+.sect .container .content-section {
+    float: left;
+    width: 55%;
+}
+
+.container .image-section {
+    float: right;
+    width: 45%;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+
+}
+
+.container .image-section img {
     width: 100%;
-    padding-top: 100px;
+    height: auto;
+    border-radius: 100%;
 }
 
-.swiper .swiper-button-prev, .swiper .swiper-button-next{
+.content-section .title {
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+.content-section .content h3 {
+    margin-top: 20px;
+}
+
+.content-section .content p {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.content-section .content .button {
+    margin-top: 30px;
+}
+
+.content-section .content .button a {
+    background-color: orangered;
+    padding: 12px 40px;
+    text-decoration: none;
     color: white;
-}
-
-.swiper .swiper-pagination-bullet-active{
-    background-color: white;
+    font-size: 25px;
+    letter-spacing: 1.2px;
 
 }
 
-
-.items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 30px 20px;
-    grid-column-gap: 20px;
-    grid-row-gap: 30px;
-    background-color: aqua;
-    width: 100%;
+.content-section .content .button a:hover {
+    background-color: blue;
 }
 
-.item img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    cursor: pointer;
-    transform: 0.2s ease;
-
-}
-
-.item img:hover {
-    transform: scale(1.04);
-}
-
-.item h4 {
+.content-section .social {
+    margin: 20px 20px;
     padding: 10px;
-    text-align: center;
 }
 
-.item p {
-    padding: 10px;
-    text-align: center;
+.content-section .social i {
     color: black;
     font-size: 20px;
-}
-
-
-.item button {
-    padding: 10px 30px;
-    border: none;
-    outline: none;
-    background-color: blue;
-    color: white;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 20px;
-    display: block;
-    margin: 0 auto;
-    transition: 0.2s all;
-}
-
-.item a {
-    text-decoration: none;
-}
-
-.item button {
-    transform: scale(1.08);
+    padding: 0px 10px;
 }
 
 @media screen and (max-width:768px) {
-    .items {
-        grid-template-columns: repeat(1, 1fr);
+     .sect .container {
+        width: 80%;
+        display: block;
+        margin: auto;
+        padding: top 50px;
+    }
+    .title h1{
+        font-size: 28px;
     }
 
-    .sub h1 {
-        font-size: 50px;
+    .content-section {
+        float: right;
+        width: 100%;
+        display: block;
+        margin: auto;
+
     }
 
-    .sub p {
-        padding-left: 200px;
+    .image-section {
+        float: none;
+        width: 40%;
     }
+    .content-section .content .button a {
+    background-color: orangered;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
 
-    .header h1 {
-        font-size: 50px;
-    }
-
-    .feat h1{
-        font-size: 35px;
-        padding-top: 5px;
-    }
 }
-
+}
 
 
 
@@ -246,4 +233,3 @@ nav ul li:hover .dropdown ul li{
 .fa-copyright {
     color: white;
 }
-
