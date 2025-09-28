@@ -20,6 +20,7 @@
     font-size: 80px;
     grid-area: "overlap";
     background-color: aqua;
+    padding-top: 30px;
 
 }
 
@@ -35,6 +36,7 @@
     padding-left: 900px;
     color: blue;
     background-color: aqua;
+    padding-bottom: 30px;
 }
 
 
@@ -119,7 +121,7 @@ nav ul li:hover .dropdown ul li{
 
 .swiper-slide img{
     width: 100%;
-    padding-top: 100px;
+    
 }
 
 .swiper .swiper-button-prev, .swiper .swiper-button-next{
