@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Horlanif Enterprise | Online Order & Delivery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+body{margin:0;background:#f4f6f8}
+.hidden{display:none}
+.container{max-width:1100px;margin:auto;padding:15px;background:#fff;min-height:100vh}
+h1,h2,h3{text-align:center}
+
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.product{border:1px solid #ddd;border-radius:10px;padding:10px;text-align:center}
+.product img{width:100%;height:150px;object-fit:contain}
+.product button{width:100%;padding:10px;border:none;border-radius:6px;background:#1e88e5;color:#fff}
+
+.cart-item{display:flex;justify-content:space-between;margin:6px 0}
+.total{font-weight:bold;margin-top:10px}
+
+input,textarea,select{width:100%;padding:10px;margin:6px 0 12px;border:1px solid #ccc;border-radius:6px}
+button.main{width:100%;padding:12px;border:none;border-radius:6px;background:#43a047;color:#fff;font-size:16px}
+
+.admin-order{border:1px solid #ddd;padding:10px;border-radius:8px;margin-bottom:10px}
+footer{text-align:center;margin-top:20px;font-size:14px;color:#555}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ADMIN LOGIN -->
+<div id="adminLogin">
+<h2>Admin Login</h2>
+<input id="adminUser" placeholder="Username" />
+<input id="adminPass" type="password" placeholder="Password" />
+<button class="main" onclick="loginAdmin()">Login</button>
+</div>
+
+<!-- SHOP -->
+<div id="shop" class="hidden">
+<h1>Horlanif Enterprise Store</h1>
+<div class="products">
+<div class="product">
+<img src="https://via.placeholder.com/200x150?text=Phone+Holder" />
+<h3>Phone Holder</h3>
+<p>₦3,000</p>
+<button onclick="addToCart('Phone Holder',3000)">Add to Cart</button>
+</div>
+<div class="product">
+<img src="https://via.placeholder.com/200x150?text=USB+Bulb" />
+<h3>USB Bulb</h3>
+<p>₦2,000</p>
+<button onclick="addToCart('USB Bulb',2000)">Add to Cart</button>
+</div>
+</div>
+<br />
+<button class="main" onclick="goCheckout()">Proceed to Checkout</button>
+</div>
+
+<!-- CHECKOUT -->
+<div id="checkout" class="hidden">
+<h2>Checkout</h2>
+<div id="cart"></div>
+<div class="total" id="total"></div>
+<input id="cName" placeholder="Customer Name" />
+<input id="cPhone" placeholder="Phone Number" />
+<textarea id="cAddress" placeholder="Delivery Address"></textarea>
+<select id="payment">
+<option value="transfer">Bank Transfer</option>
+<option value="paystack">Paystack (Online)</option>
+</select>
+<button class="main" onclick="placeOrder()">Place Order</button>
+</div>
+
+<!-- SUCCESS -->
+<div id="success" class="hidden">
+<h2>Order Successful 🎉</h2>
+<p>Order ID: <strong id="orderId"></strong></p>
+<p>Status: <strong id="status">Pending</strong></p>
+<button class="main" onclick="sendWhatsApp()">Send WhatsApp Confirmation</button>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div id="admin" class="hidden">
+<h2>Admin Dashboard</h2>
+<div id="orders"></div>
+</div>
+
+<footer>Powered by Horlanif Enterprise © 2026</footer>
+</div>
+
+<script>
+// ====== STORAGE ======
+let orders = JSON.parse(localStorage.getItem('orders')) || [];
+let cart = [];
+let currentOrder = null;
+
+// ====== ADMIN LOGIN ======
+function loginAdmin(){
+  if(adminUser.value==='admin' && adminPass.value==='1234'){
+    adminLogin.classList.add('hidden');
+    shop.classList.remove('hidden');
+    admin.classList.remove('hidden');
+    renderAdmin();
+  }else{
+    alert('Invalid admin login');
+  }
+}
+
+// ====== CART ======
+function addToCart(name,price){
+  cart.push({name,price});
+  alert(name + ' added to cart');
+}
+
+function goCheckout(){
+  if(cart.length===0){alert('Cart is empty');return;}
+  shop.classList.add('hidden');
+  checkout.classList.remove('hidden');
+  renderCart();
+}
+
+function renderCart(){
+  let html='';
+  let total=0;
+  cart.forEach(item=>{
+    html+=`<div class="cart-item"><span>${item.name}</span><span>₦${item.price}</span></div>`;
+    total+=item.price;
+  });
+  document.getElementById('cart').innerHTML=html;
+  document.getElementById('total').innerText='Total: ₦'+total;
+}
+
+// ====== ORDER ======
+function placeOrder(){
+  if(!cName.value||!cPhone.value||!cAddress.value){alert('Fill all fields');return;}
+
+  const id='ORD'+Date.now();
+  currentOrder={
+    id,
+    name:cName.value,
+    phone:cPhone.value,
+    address:cAddress.value,
+    payment:payment.value,
+    items:[...cart],
+    status:'Pending'
+  };
+
+  orders.push(currentOrder);
+  localStorage.setItem('orders',JSON.stringify(orders));
+
+  checkout.classList.add('hidden');
+  success.classList.remove('hidden');
+  orderId.innerText=id;
+
+  renderAdmin();
+}
+
+// ====== ADMIN VIEW ======
+function renderAdmin(){
+  let html='';
+  orders.forEach(o=>{
+    html+=`<div class="admin-order"><b>${o.id}</b><br>${o.name}<br>Status: ${o.status}</div>`;
+  });
+  document.getElementById('orders').innerHTML=html;
+}
+
+// ====== WHATSAPP ======
+function sendWhatsApp(){
+  let msg=`Order ID: ${currentOrder.id}\nName: ${currentOrder.name}\nPhone: ${currentOrder.phone}\nAddress: ${currentOrder.address}`;
+  window.open(`https://wa.me/2348139487564?text=${encodeURIComponent(msg)}`,'_blank');
+}
+</script>
+</body>
+</html>
