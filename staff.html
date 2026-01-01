@@ -6,50 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HORLANIF ENTERPRISE</title>
     <link rel="stylesheet" href="staff.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+     <link rel="shortcut icon" href="images/favicon-32x32.png" type="png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
     <!------------------ header ------------->
 
-    <section class="header">
-        <nav>
-            <a href="index.html"><img src="images/image.png"></a>
+    <!-- Nav Bar -->
+    <div class="nav-bar">
+        <a href="index.html"><img src="images/logo-01.png" alt=""></a>
+        <ul>
+            <a href="index.html">
+                <li>HOME</li>
+            </a>
+            <a href="">
+                <li>PRODUCTS</li>
+            </a>
+            <a href="">
+                <li>ABOUT US</li>
+            </a>
+            <a href="">
+                <li>CONTACT US</li>
+            </a>
 
-            <div class="nav-links">
-                <ul>
-                    <li><a href="index.html" target="_blank">Home</a></li>
-                    <li><a href="about.html" target="_blank">About</a></li>
-                    <li><a href="product.html" target="_blank">Product &#x25BE;</a>
-                        <div class="dropdown">
-                            <ul>
-                                <li><a href="">New Arrival</a></li>
-                                <li><a href="category.html">Category</a></li>
-                                <li><a href="rated.html">Highly Rated</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="services.html" target="_blank">Services &#x25BE;</a>
-                        <div class="dropdown">
-                            <ul>
-                                <li><a href="">Procurement & Shipping</a></li>
-                                <li><a href="">Online Registration & Thesis Writing</a></li>
-                                <li><a href="">Graphic Design & Web Development</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="staff.html" target="_blank">Staff</a></li>
+        </ul>
 
-                    <li><a href="contact.html" target="_blank">Contact</a></li>
+        <div class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>0</span>
+
+        </div>
 
 
-                </ul>
-            </div>
-            <a href="index.html"><img src="images/image.png"></a>
-        </nav>
-        <h1 style="background-color: blue;">Our Staff</h1>
+        <div class="signup">
+            <a href="admin.html"><button>Register</button></a>
+            <button>Login</button>
+        </div>
+        <div class="mobile" id="harmburger" onclick="openMenu()"><i class="fa-solid fa-bars"></i></div>
+    </div>
+
+
+    <section>
+        <div class="side-bar">
+            <div id="closeBtn" onclick="closeMenu()"><i class="fa-solid fa-xmark cancel"></i></div>
+            <a href="index.html">
+                <li>HOME</li>
+            </a>
+            <a href="">
+                <li>PRODUCTS</li>
+            </a>
+            <a href="">
+                <li>ABOUT US</li>
+            </a>
+            <a href="">
+                <li>CONTACT US</li>
+            </a>
+
+            <a href="admin.html"><button>Register</button></a>
+            <a href=""><button>Login</button></a>
+        </div>
     </section>
+    <section>
 
     <!--------------- Our Staff ---------------->
 
@@ -59,7 +82,7 @@
             <div class="card-wrap">
                 <div class="card">
                     <div class="profile-img">
-                        <img src="images/profile3.png">
+                        <img src="images/profile7.jpg">
                     </div>
                     <div class="content">
                         <h3>OLAMIPOSI</h3>
@@ -96,7 +119,7 @@
 
                 <div class="card">
                     <div class="profile-img">
-                        <img src="images/profile2.jpg">
+                        <img src="images/profile8-01.jpg">
                     </div>
                     <div class="content">
                         <h3>OLAIDE</h3>
@@ -113,7 +136,7 @@
 
                 <div class="card">
                     <div class="profile-img">
-                        <img src="images/profile4.jpg">
+                        <img src="images/profile9-01.jpg">
                     </div>
                     <div class="content">
                         <h3>BAYONLE</h3>

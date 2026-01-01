@@ -158,6 +158,11 @@ button {
     border-radius: 15px;
 }
 
+
+.sect-02 h2, .sect-02 p{
+    margin-bottom: 10px;
+}
+
 .container {
     padding: 20px;
     display: grid;
