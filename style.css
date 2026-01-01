@@ -379,7 +379,8 @@ details{
                 border-radius: 2rem;
                 box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px;
                 padding-top: 30px;
-                height: 100dvh;
+                max-height: 70vh;
+                transition: 0.4s ease-in-out;
 
 
             }
