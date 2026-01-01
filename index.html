@@ -17,21 +17,64 @@
     <div class="nav-bar">
         <a href="index.html"><img src="images/logo-01.png" alt=""></a>
         <ul>
-            <li><a href=""></a>HOME</li>
-            <li><a href=""></a>PRODUCTS</li>
-            <li><a href=""></a>ABOUT US</li>
-            <li><a href=""></a>CONTACT US</li>
+            <a href="index.html">
+                <li>HOME</li>
+            </a>
+            <a href="">
+                <li>PRODUCTS</li>
+            </a>
+            <a href="">
+                <li>ABOUT US</li>
+            </a>
+            <a href="">
+                <li>CONTACT US</li>
+            </a>
+
         </ul>
 
-        <div class="cart mobile"><i class="fa-solid fa-cart-plus"></i></div>
+        <div class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>0</span>
+
+        </div>
+
+
         <div class="signup">
             <a href="admin.html"><button>Register</button></a>
             <button>Login</button>
         </div>
-        <div class="mobile"><i class="fa-solid fa-bars"></i></div>
+        <div class="mobile" id="harmburger" onclick="openMenu()"><i class="fa-solid fa-bars"></i></div>
     </div>
 
+
+    <section>
+        <div class="side-bar">
+            <div id="closeBtn" onclick="closeMenu()"><i class="fa-solid fa-xmark cancel"></i></div>
+            <a href="index.html">
+                <li>HOME</li>
+            </a>
+            <a href="">
+                <li>PRODUCTS</li>
+            </a>
+            <a href="">
+                <li>ABOUT US</li>
+            </a>
+            <a href="">
+                <li>CONTACT US</li>
+            </a>
+
+            <a href="admin.html"><button>Register</button></a>
+            <a href=""><button>Login</button></a>
+        </div>
+    </section>
+    <section>
+        <div class="news">
+            <span style="background-color: orangered; color:white; padding: 2px 4px;">LATEST NEWS</span>
+            <marquee behavior="" direction="" style="position: absolute;">Website Under development</marquee></div>
+    </section>
     <section class="sect-01">
+
+        
         <div>
             <h1>Welcome to Horlanif Enterprise Store!</h1>
             <p>Order Quality Products at Affordable Price</p>
@@ -50,43 +93,50 @@
             <div class="card">
                 <img src="images/image 6.jpg" alt="">
                 <h6>18W Q.C Adaptor</h6>
-                <p><s>&#8358;4,000</s> <br>&#8358;3,500</p>
-                <a href="">Buy Now</a>
+                <p>&#8358;3,500</p>
+                <a href=" https://wa.me/8139487564" target="_blank">Buy Now</a>
             </div>
             <div class="card">
                 <img src="images/image 8.jpg" alt="">
                 <h6>2A5V Adaptor</h6>
                 <p>&#8358;3,000</p>
+                <a href=" https://wa.me/8139487564" target="_blank">Buy Now</a>
             </div>
             <div class="card">
                 <img src="images/image13.png" alt="">
-                <h6>18W Q.C Adaptor</h6>
-                <p><s>&#8358;4,000</s> <br>&#8358;3,500</p>
+                <h6>120W TYPE-C CORD</h6>
+                <p>&#8358;2,000</p>
+                <a href=" https://wa.me/8139487564" target="_blank">Buy Now</a>
             </div>
             <div class="card">
                 <img src="images/image10.jpg" alt="">
-                <h6>18W Q.C Adaptor</h6>
-                <p><s>&#8358;4,000</s> <br>&#8358;3,500</p>
+                <h6>PORTABLE PHONEHOLDER</h6>
+                <p>&#8358;500</p>
+                <a href=" https://wa.me/8139487564" target="_blank">Buy Now</a>
             </div>
             <div class="card">
                 <img src="images/image5.jpg" alt="">
-                <h6>18W Q.C Adaptor</h6>
-                <p><s>&#8358;4,000</s> <br>&#8358;3,500</p>
+                <h6>USB BULB</h6>
+                <p>&#8358;600</p>
+                <a href=" https://wa.me/8139487564" target="_blank">Buy Now</a>
             </div>
             <div class="card">
                 <img src="images/image 7.jpg" alt="">
-                <h6>18W Q.C Adaptor</h6>
-                <p><s>&#8358;4,000</s> <br>&#8358;3,500</p>
+                <h6>FLEXIBLE USB LAMO</h6>
+                <p>&#8358;1,000</p>
+                <a href=" https://wa.me/8139487564" target="_blank">Buy Now</a>
             </div>
             <div class="card">
                 <img src="images/otg.jpg" alt="">
-                <h6>18W Q.C Adaptor</h6>
-                <p><s>&#8358;4,000</s> <br>&#8358;3,500</p>
+                <h6>3-IN-1 OTG </h6>
+                <p>&#8358;4,500</p>
+                <a href=" https://wa.me/8139487564" target="_blank">Buy Now</a>
             </div>
             <div class="card">
                 <img src="images/nokia ba3.png" alt="">
-                <h6>18W Q.C Adaptor</h6>
-                <p><s>&#8358;4,000</s> <br>&#8358;3,500</p>
+                <h6>BL-5C BATTERY</h6>
+                <p>&#8358;4,500</p>
+                <a href=" https://wa.me/8139487564" target="_blank">Buy Now</a>
             </div>
         </div>
 
@@ -116,42 +166,59 @@
         <div>
             <h2>HORLANIF ENTERPRISE</h2>
             <li>Lorem ipsum dolor sit amet conr repudiandae volu</li>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://web.facebook.com/profile.php?id=100066798954658" target="_blank"><i
+                    class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.me/8139487564" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             <a href=""><i class="fa-brands fa-instagram"></i></a>
             <a href=""><i class="fa-brands fa-x-twitter"></i></a>
 
         </div>
-        <div>
+        <div class="about">
             <h2>ABOUT US</h2>
-            <li><a href=""></a>History</li>
-            <li><a href=""></a>Services</li>
-            <li><a href=""></a>Categories</li>
+            <a href="">
+                <li>History</li>
+            </a>
+            <a href="">
+                <li>Services</li>
+            </a>
+            <a href="">
+                <li>Categories</li>
+            </a>
+
         </div>
+
         <div>
             <h2>CONTACT US</h2>
             <li><a href=""><i class="fa-solid fa-phone-volume"></i></a>+234-8139487564</li>
-            <li><a href=""><i class="fa-solid fa-location-dot"></i></a>Behind Jaye Mosque, <br> Along Ota-Efun Market,<br>Osogbo, Osun State.</li>
+            <li><a href=""><i class="fa-solid fa-location-dot"></i></a>Behind Jaye Mosque, <br> Along Ota-Efun
+                Market,<br>Osogbo, Osun State.</li>
             <li><a href=""><i></i></a></li>
         </div>
         <div>
             <h2>FAQs</h2>
             <details>
-                <summary>Did you offer shipping?</summary>
-                Yes
+                <summary>Do you offer bulk purchases?</summary>
+                Yes. We offer discounted prices for bulk orders.
             </details>
             <details>
-                <summary>Did accept payment on delivery?</summary>
-                Yes, but within Osogbo only
+                <summary>Can I pay on delivery?</summary>
+                Yes, Pay on Delivery is available for customers within Osogbo.
             </details>
             <details>
-                <summary>Did you offer shipping?</summary>
-                Yes
+                <summary>Do you offer home delivery?</summary>
+                Yes. We deliver to Osogbo and nearby locations. Nationwide delivery is also available through
+                courier
+                services.
             </details>
             <details>
-                <summary>Did you offer shipping?</summary>
-                Yes
+                <summary>What if I receive a faulty product?</summary>
+                If you receive a damaged or faulty item, contact us within 24 hours and we will arrange a
+                replacement.
+            </details>
+            <details>
+                <summary>Are your products original and durable?</summary>
+                Yes. All our phone holders and USB bulbs are tested, durable, and of good quality.
             </details>
 
         </div>
@@ -162,10 +229,10 @@
     <!-- Footer -->
     <footer>
         <div class="footer">
-            <p>Horlanif Enterprise 2026.All Rights Reserved </p>
+            <p>Horlanif Enterprise &copy; 2026.All Rights Reserved </p>
         </div>
     </footer>
-
+    <script src="script.js"></script>
 
 </body>
 
