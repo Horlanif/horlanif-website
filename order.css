@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+h1 {
+    text-align: center;
+    color: orangered;
+    padding: 10px;
+    font-size: 100px;
+    grid-area: "overlap";
+
+}
+
+.sub p {
+    padding-left: 900px;
+    color: blue;
+    background-color: aqua;
+}
+
+
+
+/* --------------------Order Page------------ */
+.container-order{
+    max-width:500px;
+    background:#fff;
+    margin:40px auto;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align:center;
+    color:#1d3557;
+    margin-bottom:5px;
+}
+
+.logo{
+    text-align:center;
+    font-weight:bold;
+    color:orangered;
+    margin-bottom:20px;
+}
+
+label{
+    font-weight:600;
+    display:block;
+    margin-top:15px;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+textarea{
+    resize:none;
+}
+
+.container-order button{
+    width:100%;
+    padding:14px;
+    margin-top:25px;
+    background:orangered;
+    border:none;
+    color:white;
+    font-size:17px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.container-order button:hover{
+    background:navy;
+}
+
+.footer{
+    text-align:center;
+    font-size:13px;
+    margin-top:15px;
+    color:navy;
+}
+
+
+
+@media(max-width: 768px) {
+    .card-wrap {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 100%;
+        margin: 20px;
+    }
+
+}
+
+@media (min-width:769px) and (max-width:1024px){
+     .card-wrap {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+

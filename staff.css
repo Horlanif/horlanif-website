@@ -1,15 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400..700&family=Graduate&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto Condensed", sans-serif;
     box-sizing: border-box;
-}
-
-.header {
-    min-height: 10vh;
-    width: 100%;
+    font-family: 'Poppins';
 }
 
 
@@ -29,73 +24,10 @@ h1 {
 }
 
 
-nav {
-    background-color: aqua;
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.header {
-    background-color: blue;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    padding: 20px;
-    text-decoration: none;
-    color: white;
-    transition: 0.2s ease-in;
-    font-size: 20px;
-    margin-right: 50px;
-
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: white;
-}
-
-nav ul li a:hover {
-    background-color: orangered;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.dropdown ul li{
-    display: none;
-}
-
-nav ul li:hover .dropdown ul{
-    display: block;
-    position: absolute;
-    background-color: blue;
-    
-
-
-    
-}
-
-nav ul li:hover .dropdown ul li{
-    display: block;
-    margin: 10px;
-     margin-top: 15px;
-    margin-left:20px;
-    border-bottom: 2px solid white;
-
-
-}
-
 
 /* --------------------Our Staff------------ */
 .contain-sec {
-    background-color: aqua;
+    background-color: transparent;
 }
 
 .contain p {
@@ -125,6 +57,8 @@ nav ul li:hover .dropdown ul li{
     max-width: 350px;
     margin: 10px;
     border-radius: 10px;
+    border: none;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card .profile-img {
@@ -164,7 +98,7 @@ nav ul li:hover .dropdown ul li{
     font-size: 1.2rem;
     color: white;
     background-color: orangered;
-    padding: 15px;
+    padding: 10px 0px 10px 0px;
     margin: 0 3px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
@@ -179,7 +113,7 @@ nav ul li:hover .dropdown ul li{
 }
 
 
-@media screen and (max-width: 500px) {
+@media(max-width: 768px) {
     .card-wrap {
         flex-wrap: wrap;
     }
@@ -191,35 +125,10 @@ nav ul li:hover .dropdown ul li{
 
 }
 
-
-
-/* ---------------footer----------- */
-
-.footer {
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
+@media (min-width:769px) and (max-width:1024px){
+     .card-wrap {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
-.footer h4 {
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
-}
-
-.footer p {
-    font-weight: 200;
-    font-size: 15px;
-
-}
-
-.icons .fa {
-    color: blue;
-    margin: 0 13px;
-    cursor: pointer;
-    padding: 18px 0;
-}
-
-.fa-copyright {
-    color: white;
-}
