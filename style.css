@@ -260,18 +260,20 @@ button {
 .side-bar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     background-color: navy;
-    gap: 2rem;
+    gap: 15px;
     position: absolute;
-    top: 20%;
+    top: 0;
     left: -100%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     width: 20rem;
     border: .1rem solid orangered;
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px;
+    padding: 20px 0;
+
 
 }
 
@@ -365,18 +367,20 @@ details{
             .side-bar {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
                 background-color: navy;
                 gap: 2rem;
                 position: absolute;
-                top: 20%;
+                top:20%;
                 left: -100%;
-                transform: translateX(-50%);
+                /* transform: translateX(-50%); */
                 width: 20rem;
                 border: .1rem solid orangered;
                 border-radius: 2rem;
                 box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px;
+                padding-top: 30px;
+                height: 100dvh;
+
 
             }
 
