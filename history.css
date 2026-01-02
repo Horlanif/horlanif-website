@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+ 
+/*------------------------- read-more------------------ */
+
+
+.read-more{
+    background-color: #ddd;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 200;
+    min-height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 40px;
+}
+
+.read-more p{
+    font-weight: 500;
+}
+
+.read-more h3{
+    text-align: center;
+    font-size: 30px;
+    color: orangered;
+    text-decoration: underline;
+}
+
+
+/* ---------------footer----------- */
+
+
+
+
+@media screen and (max-width:768px){
+    
+.read-more{
+    background-color: #ddd;
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 200;
+    min-height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 40px;
+}
+}
