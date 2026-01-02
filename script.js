@@ -21,3 +21,24 @@ function sendMail(){
 
     
 }
+
+
+// ===========Catergory switch============
+
+function showSection(sectionId, btn) {
+    // Hide all sections
+    document.getElementById("mobile-acc").style.display = "none";
+    document.getElementById("kitchen").style.display = "none";
+    document.getElementById("fashion").style.display = "none";
+    document.getElementById("pre-order").style.display = "none";
+
+    // Show selected section
+    document.getElementById(sectionId).style.display = "block";
+
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll(".btn-swiper button");
+    buttons.forEach(b => b.classList.remove("active"));
+
+    // Add active to clicked button
+    btn.classList.add("active");
+}

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+.btn-swiper button{
+    /* margin-left:100px ; */
+    background-color: transparent;
+    border: 1px solid orangered;
+    color: navy;
+    justify-content: center;
+  
+}
+
+.btn-swiper button:hover{
+    background-color: navy;
+    color: white;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    background-color: burlywood;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.item{
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    transform: 0.2s ease;
+    border-radius: 10px;
+    padding: 10px;
+
+
+}
+
+.item img:hover {
+    transform: scale(1.04);
+}
+
+.item h4 {
+    padding: 10px;
+    text-align: center;
+}
+
+.item p {
+    padding: 10px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+
+.item button {
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s all;
+}
+
+
+#kitchen,#fashion,#pre-order{
+    display: none;
+}
+
+
+#mobile-acc{
+    display: block;
+}
+
+.btn-swiper button.active {
+    background: #ff7a00;
+    color: white;
+}
+
+
+
+.item a {
+    text-decoration: none;
+}
+
+.item button {
+    transform: scale(1.08);
+}
+
+@media (max-width:768px) {
+    .items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sub h1 {
+        font-size: 50px;
+    }
+
+    .sub p {
+        padding-left: 200px;
+    }
+
+    .header h1 {
+        font-size: 50px;
+    }
+
+    .feat h1{
+        font-size: 35px;
+        padding-top: 5px;
+    }
+
+    .btn-swiper{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+    background-color: transparent;
+    color: navy;
+    justify-content: center;
+  
+}
+
+.btn-swiper button{
+    margin-left: 20px;
+    width: 90%;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    background-color: burlywood;
+    width: 100%;
+    margin-top: 20px;
+}
+}
+
+
+@media (min-width:769px) and (max-width:1024px){
+    .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    background-color: burlywood;
+    width: 100%;
+    margin-top: 20px;
+}
+
+ .btn-swiper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    background-color: transparent;
+    color: navy;
+    
+  
+}
+    
+}
+
+@media(min-width:1025px){
+    .btn-swiper{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    background-color: transparent;
+    color: navy;
+    
+  
+}
+}
+
+
