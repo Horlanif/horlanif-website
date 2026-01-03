@@ -46,12 +46,15 @@ ul li {
     padding: 5px;
     font-size: 20px;
     font-weight: bold;
-
+     transition: all ease 0.3s;
 }
+
+
 
 .nav-bar li {
     display: inline-flex;
     margin-left: 20px;
+    color: orangered;
 }
 
 .cart {
@@ -242,6 +245,7 @@ button {
 
 .sect-04 li {
     list-style: none;
+    line-height: 1.8rem;
 }
 
 .sect-04 h2 {

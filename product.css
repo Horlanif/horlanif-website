@@ -8,16 +8,16 @@
     box-sizing: border-box;
 }
 
-.btn-swiper button{
+.btn-swiper button {
     /* margin-left:100px ; */
     background-color: transparent;
     border: 1px solid orangered;
     color: navy;
     justify-content: center;
-  
+
 }
 
-.btn-swiper button:hover{
+.btn-swiper button:hover {
     background-color: navy;
     color: white;
 }
@@ -28,28 +28,28 @@
     padding: 30px 20px;
     grid-column-gap: 20px;
     grid-row-gap: 30px;
-    background-color: burlywood;
+    /* background-color: burlywood; */
     width: 100%;
     margin-top: 20px;
 }
 
 
-.item{
+.item {
     align-items: center;
     justify-content: center;
     border: 1px solid black;
+    background-color: burlywood;
+    border-radius: 10px;
 }
 
 .item img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: fill;
     cursor: pointer;
     transform: 0.2s ease;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px;
-
-
 }
 
 .item img:hover {
@@ -84,12 +84,14 @@
 }
 
 
-#kitchen,#fashion,#pre-order{
+#kitchen,
+#fashion,
+#pre-order {
     display: none;
 }
 
 
-#mobile-acc{
+#mobile-acc {
     display: block;
 }
 
@@ -125,74 +127,92 @@
         font-size: 50px;
     }
 
-    .feat h1{
+    .feat h1 {
         font-size: 35px;
         padding-top: 5px;
     }
 
-    .btn-swiper{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 20px;
-    background-color: transparent;
-    color: navy;
-    justify-content: center;
-  
-}
+    .btn-swiper {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 20px;
+        background-color: transparent;
+        color: navy;
+        justify-content: center;
 
-.btn-swiper button{
-    margin-left: 20px;
-    width: 90%;
-}
+    }
 
-.items {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    padding: 30px 20px;
-    grid-column-gap: 20px;
-    grid-row-gap: 30px;
-    background-color: burlywood;
-    width: 100%;
-    margin-top: 20px;
-}
-}
+    .btn-swiper button {
+        margin-left: 20px;
+        width: 90%;
+    }
 
-
-@media (min-width:769px) and (max-width:1024px){
     .items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 30px 20px;
-    grid-column-gap: 20px;
-    grid-row-gap: 30px;
-    background-color: burlywood;
-    width: 100%;
-    margin-top: 20px;
-}
+        display: grid;
+        grid-template-columns:1fr;
+        padding: 30px 20px;
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+        width: 100%;
+        margin-top: 20px;
+    }
 
- .btn-swiper{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
-    background-color: transparent;
-    color: navy;
-    
-  
-}
-    
-}
+    .item img {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+        cursor: pointer;
+        transform: 0.2s ease;
+        border-radius: 20px;
+        padding: 10px;
+    }
 
-@media(min-width:1025px){
-    .btn-swiper{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-    background-color: transparent;
-    color: navy;
-    
-  
-}
+    .item {
+        border: 1px solid black;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+
+    }
 }
 
 
+@media (min-width:769px) and (max-width:1024px) {
+    .items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 30px 20px;
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+        background-color: burlywood;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .btn-swiper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        background-color: transparent;
+        color: navy;
+
+
+    }
+
+}
+
+@media(min-width:1025px) {
+    .btn-swiper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        background-color: transparent;
+        color: navy;
+
+
+    }
+
+
+}
