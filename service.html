@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORLANIF ENTERPRISE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="nav-bar">
+        <a href="index.html"><img src="images/logo-01.png" alt=""></a>
+        <ul>
+            <a href="index.html">
+                <li>HOME</li>
+            </a>
+            <a href="product.html">
+                <li>PRODUCTS</li>
+            </a>
+            <a href="staff.html">
+                <li>STAFF</li>
+            </a>
+            <a href="contact.html">
+                <li>CONTACT US</li>
+            </a>
+
+        </ul>
+
+        <div class="cart">
+            <i class="fa-solid fa-cart-plus"></i>
+            <span>0</span>
+
+        </div>
+
+
+        <div class="signup">
+            <a href="admin.html"><button>Login</button></a>
+            <a href="Horlanif Store.apk"><button>Download App</button></a>
+        </div>
+        <div class="mobile" id="harmburger" onclick="openMenu()"><i class="fa-solid fa-bars"></i></div>
+    </div>
+
+
+    <section>
+        <div class="side-bar">
+            <div id="closeBtn" onclick="closeMenu()"><i class="fa-solid fa-xmark cancel"></i></div>
+            <a href="index.html">
+                <li>HOME</li>
+            </a>
+            <a href="product.html">
+                <li>PRODUCTS</li>
+            </a>
+            <a href="staff.html">
+                <li>STAFF</li>
+            </a>
+            <a href="contact.html">
+                <li>CONTACT US</li>
+            </a>
+
+            <a href="admin.html"><button>Login</button></a>
+            <a href="Horlanif Store.apk"><button>Download App</button></a>
+            <a href="order.html"><button>Order Now</button></a>
+
+        </div>
+    </section>
+
+
+    <section class="feat">
+        <div class="btn-swiper">
+            <button onclick="showSection('profession',this)">Professional Skills & Tech</button>
+            <button onclick="showSection('academic',this)">Academic Tutoring</button>
+
+        </div>
+    </section>
+
+
+    <div id="profession">
+
+        <section class="items">
+            <div class="item">
+                <i class="fa-solid fa-code"></i>
+                <h4>FRONTEND DEVELOMENT</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi voluptatem optio dolore mollitia
+                    enim quia saepe, es</p>
+                    <a href=""><button>Contact Us</button></a>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-chart-column"></i>
+                <h4>DATA ANALYSIS</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi voluptatem optio dolore mollitia
+                    enim quia saepe, es</p>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-palette"></i>
+                <h4>GRAPHIC DESIGN</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi voluptatem optio dolore mollitia
+                    enim quia saepe, es</p>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-wifi"></i>
+                <h4>ONLINE REGISTRAION</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi voluptatem optio dolore mollitia
+                    enim quia saepe, es</p>
+            </div>
+
+
+        </section>
+    </div>
+
+
+    <div id="academic">
+
+        <section class="items">
+            <div class="item">
+                <i class="fa-solid fa-plane-departure"></i><br>
+                    <h4>IMPORTATION</h4>
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi voluptatem optio dolore mollitia
+                    enim quia saepe, es</p>
+                <a href=""><button>Contact Us</button></a>
+                </div>
+               
+            <div class="item">
+                <i class="fa-solid fa-atom"></i>
+                <h4>The STEM Core</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi voluptatem optio dolore mollitia
+                    enim quia saepe, es</p>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-compass-drafting"></i>
+                <h4>TECHNICAL DRAWING</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi voluptatem optio dolore mollitia
+                    enim quia saepe, es</p>
+            </div>
+            <div class="item">
+                <i class="fa-solid fa-book-open"></i>
+                <h4>THESIS & RESEARCH SUPPORT</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi voluptatem optio dolore mollitia
+                    enim quia saepe, es</p>
+            </div>
+
+        </section>
+    </div>
+
+
+    <section class="sect-04">
+        <div>
+            <h2>HORLANIF ENTERPRISE</h2>
+            <li>Horlanif Enterprise is a fast-growing Nigerian brand. <br>
+                A small gadget business has grown into a multi-service <br>
+                enterprise providing quality electronic
+                accessories, digital services, <br>
+                and custom products to customers across Nigeria.</li>
+            <a href="https://web.facebook.com/profile.php?id=100066798954658" target="_blank"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://wa.me/8139487564" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+
+        </div>
+        <div class="about">
+            <h2>ABOUT US</h2>
+            <a href="history.html">
+                <li>History</li>
+            </a>
+            <a href="service.html">
+                <li>Services</li>
+            </a>
+            <a href="product.html">
+                <li>Categories</li>
+            </a>
+
+        </div>
+
+        <div>
+            <h2>CONTACT US</h2>
+            <li><a href=""><i class="fa-solid fa-phone-volume"></i></a>+234-8139487564</li>
+            <li><a href=""><i class="fa-solid fa-location-dot"></i></a>Behind Jaye Mosque, <br> Along Ota-Efun
+                Market,<br>Osogbo, Osun State.</li>
+            <li><a href=""><i></i></a></li>
+        </div>
+        <div>
+            <h2>FAQs</h2>
+            <details>
+                <summary>Do you offer bulk purchases?</summary>
+                Yes. We offer discounted prices for bulk orders.
+            </details>
+            <details>
+                <summary>Can I pay on delivery?</summary>
+                Yes, Pay on Delivery is available for customers within Osogbo.
+            </details>
+            <details>
+                <summary>Do you offer home delivery?</summary>
+                Yes. We deliver to Osogbo and nearby locations. Nationwide delivery is also available through
+                courier
+                services.
+            </details>
+            <details>
+                <summary>What if I receive a faulty product?</summary>
+                If you receive a damaged or faulty item, contact us within 24 hours and we will arrange a
+                replacement.
+            </details>
+            <details>
+                <summary>Are your products original and durable?</summary>
+                Yes. All our phone holders and USB bulbs are tested, durable, and of good quality.
+            </details>
+
+        </div>
+
+    </section>
+
+    <hr>
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>Horlanif Enterprise &copy; 2026.All Rights Reserved </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
