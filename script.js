@@ -42,3 +42,26 @@ function showSection(sectionId, btn) {
     // Add active to clicked button
     btn.classList.add("active");
 }
+
+
+// ===========service switch============
+
+function showSection(sectionId, btn) {
+    // Hide all sections
+    document.getElementById("profession").style.display = "none";
+    document.getElementById("academic").style.display = "none";
+    
+
+    // Show selected section
+    document.getElementById(sectionId).style.display = "block";
+
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll(".btn-swiper button");
+    buttons.forEach(b => b.classList.remove("active"));
+
+    // Add active to clicked button
+    btn.classList.add("active");
+}
+
+
+
