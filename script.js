@@ -25,7 +25,7 @@ function sendMail(){
 
 // ===========Catergory switch============
 
-function showSection(sectionId, btn) {
+function showProductSection(sectionId, btn) {
     // Hide all sections
     document.getElementById("mobile-acc").style.display = "none";
     document.getElementById("kitchen").style.display = "none";
@@ -36,7 +36,7 @@ function showSection(sectionId, btn) {
     document.getElementById(sectionId).style.display = "block";
 
     // Remove active class from all buttons
-    const buttons = document.querySelectorAll(".btn-swiper button");
+    const buttons = document.querySelectorAll(".product-swiper button");
     buttons.forEach(b => b.classList.remove("active"));
 
     // Add active to clicked button
@@ -46,7 +46,7 @@ function showSection(sectionId, btn) {
 
 // ===========service switch============
 
-function showSection(sectionId, btn) {
+function showServiceSection(sectionId, btn) {
     // Hide all sections
     document.getElementById("profession").style.display = "none";
     document.getElementById("academic").style.display = "none";
@@ -56,7 +56,7 @@ function showSection(sectionId, btn) {
     document.getElementById(sectionId).style.display = "block";
 
     // Remove active class from all buttons
-    const buttons = document.querySelectorAll(".btn-swiper button");
+    const buttons = document.querySelectorAll(".service-swiper button");
     buttons.forEach(b => b.classList.remove("active"));
 
     // Add active to clicked button

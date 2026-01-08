@@ -46,7 +46,7 @@
     align-items: center;
     justify-content: center;
     border: 2px solid navy;
-    background-color: orangered;
+    background-color: hsl(16, 100%, 60%);
     border-radius: 10px;
 }
 
@@ -86,7 +86,7 @@
     padding: 5px 15px;
     border: none;
     outline: none;
-    background-color:orangered;
+    background-color:#ff4500;
     color: white;
     cursor: pointer;
     border-radius: 20px;
