@@ -46,7 +46,7 @@ ul li {
     padding: 5px;
     font-size: 20px;
     font-weight: bold;
-     transition: all ease 0.3s;
+    transition: all ease 0.3s;
 }
 
 
@@ -120,12 +120,38 @@ button {
     min-height: 500px;
     padding: 50px;
     color: navy;
+    position: relative;
+    overflow: hidden;
 }
 
 .sect-01 h1 {
     font-size: 3.5em;
     font-family: "Playwrite US Trad";
+    font-weight: 700;
+    color: navy;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+
+    /* makes text visible on image */
+
+    width: 23ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid navy;
+    animation: animate 4s steps(25) infinite;
 }
+
+
+@keyframes animate {
+
+    from {
+        width: 0
+    }
+
+    to {
+        width: 25ch
+    }
+}
+
 
 .sect-01 p {
     font-size: 30px;
@@ -161,7 +187,8 @@ button {
 }
 
 
-.sect-02 h2, .sect-02 p{
+.sect-02 h2,
+.sect-02 p {
     margin-bottom: 10px;
 }
 
@@ -286,150 +313,151 @@ button {
 }
 
 
-.sect-04 i{
+.sect-04 i {
     color: navy;
     font-size: 20px;
     margin-top: 10px;
 }
 
-.sect-04 i:hover{
+.sect-04 i:hover {
     transform: scale(1.5);
 }
 
-.sect-04 a{
+.sect-04 a {
     color: black;
     text-decoration: none;
 }
 
-summary{
+summary {
     color: black;
     font-size: 18px;
 }
-details{
+
+details {
     color: navy;
     font-size: 15px;
 }
 
 
 
-    @media(max-width: 768px) {
+@media(max-width: 768px) {
 
-        .nav-bar li {
-            display: none;
-            margin-left: 20px;
-        }
-
-            .sect-01 {
-                min-height: 250px;
-                padding: 25px;
-
-            }
-
-            .sect-01 h1 {
-                font-size: 1.8em;
-            }
-
-            .sect-01 p {
-                font-size: 15px;
-            }
-
-            .nav-bar li,
-            .signup {
-                display: none;
-            }
-
-            .container {
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                gap: 10px;
-            }
-
-            .service {
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                gap: 10px;
-            }
-
-            .sect-04 {
-                display: flex;
-                flex-direction: column;
-                padding: 20px;
-                gap: 15px;
-            }
-
-            .service {
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                gap: 10px;
-            }
-
-            .mobile {
-                display: block;
-            }
-
-            .side-bar {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: navy;
-                gap: 2rem;
-                position: absolute;
-                top:20%;
-                left: -100%;
-                /* transform: translateX(-50%); */
-                width: 20rem;
-                border: .1rem solid orangered;
-                border-radius: 2rem;
-                box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px;
-                padding-top: 30px;
-                min-height: 70vh;
-                transition: 0.4s ease-in-out;
-
-
-            }
-
-            .side-bar.active {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-        }
-
-        @media (min-width:768px) and (max-width:1024px) {
-            .nav-bar li {
-                display: none;
-                margin-left: 20px;
-            }
-
-            .container {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            }
-
-            .sect-04 {
-                display: flex;
-                flex-direction: column;
-                flex: 1;
-                padding: 20px;
-                gap: 15px;
-            }
-
-            .mobile {
-                display: block;
-            }
-        }
-
-
-
-
-    @media screen and(min-width:1025px) {
-
-        .mobile {
-            display: none;
-        }
-
-        .side-bar {
-            display: none;
-        }
+    .nav-bar li {
+        display: none;
+        margin-left: 20px;
     }
+
+    .sect-01 {
+        min-height: 250px;
+        padding: 25px;
+
+    }
+
+    .sect-01 h1 {
+        font-size: 1.4em;
+    }
+
+    .sect-01 p {
+        font-size: 15px;
+    }
+
+    .nav-bar li,
+    .signup {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .service {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .sect-04 {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .service {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .side-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: navy;
+        gap: 2rem;
+        position: absolute;
+        top: 20%;
+        left: -100%;
+        /* transform: translateX(-50%); */
+        width: 20rem;
+        border: .1rem solid orangered;
+        border-radius: 2rem;
+        box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px;
+        padding-top: 30px;
+        min-height: 70vh;
+        transition: 0.4s ease-in-out;
+
+
+    }
+
+    .side-bar.active {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .nav-bar li {
+        display: none;
+        margin-left: 20px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .sect-04 {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
+
+
+
+
+@media screen and(min-width:1025px) {
+
+    .mobile {
+        display: none;
+    }
+
+    .side-bar {
+        display: none;
+    }
+}
